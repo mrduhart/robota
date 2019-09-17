@@ -1,0 +1,120 @@
+/*----------------------------------------------------------------------------*/
+/*---------------------------------- Layout ----------------------------------*/
+/*----------------------------------------------------------------------------*/
+* {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+  /* user-select: none; */
+}
+
+html, body {
+  min-height: 100vh;
+
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #202020;
+}
+
+.wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: inherit;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+#page-header, #page-body, #page-footer {
+  position: relative;
+  width: 100%;
+  padding: 1.6rem;
+}
+
+#page-header > *, #page-body > *, #page-footer > * {
+  width: 100%;
+}
+
+#page-header {
+  min-height: 10vh;
+  font-size: 1.6rem;
+}
+
+#page-body {
+  min-height: 80vh;
+  font-size: 1.8rem;
+}
+
+#page-body > * {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#page-footer  {
+  min-height: 10vh;
+  font-size: 1.4rem;
+}
+
+.dark {
+  background-color: #202020;
+  color: #fafafa;
+}
+
+.light {
+  background-color: #fafafa;
+  color: #202020;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.5em 0;
+}
+
+p, li {
+  margin: 1em 0;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-date {
+  margin-right: 1em;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 640px) {
+  #page-header, #page-body, #page-footer {
+    padding: 2.0rem;
+  }
+
+  #page-header {
+    font-size: 1.8rem;
+  }
+
+  #page-body {
+    font-size: 2.0rem;
+  }
+
+  #page-footer  {
+    font-size: 1.6rem;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 800px) {
+
+}
