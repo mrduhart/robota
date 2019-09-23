@@ -187,9 +187,9 @@ dd {
 
 /* Tablet Styles */
 @media only screen and (min-width: 640px) {
-  #page-header,
-  #page-body,
-  #page-footer {
+  #page-header > .wrapper,
+  #page-body > .wrapper,
+  #page-footer > .wrapper {
     padding: 2.0rem;
   }
 
@@ -213,9 +213,9 @@ dd {
 
 /* Desktop Styles */
 @media only screen and (min-width: 800px) {
-  #page-header,
-  #page-body,
-  #page-footer {
+  #page-header > .wrapper,
+  #page-body > .wrapper,
+  #page-footer > .wrapper {
     padding: 2.8rem 3.0rem;
   }
 
