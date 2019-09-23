@@ -30,15 +30,33 @@ html, body {
   overflow: hidden;
 }
 
-#page-header, #page-body, #page-footer {
+#page-header,
+#page-body,
+#page-footer {
   position: relative;
   width: 100%;
-  padding: 1.2rem 1.6rem;
 }
 
-#page-header > *, #page-body > *, #page-footer > * {
+#page-header > .wrapper,
+#page-body > .wrapper,
+#page-footer > .wrapper {
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+}
+
+#page-header > .wrapper > *,
+#page-body > .wrapper > *,
+#page-footer > .wrapper > * {
+  flex: 0 0 auto;
   width: 100%;
 }
+
+/* #page-header > *, #page-body > *, #page-footer > * {
+  width: 100%;
+} */
 
 #page-header {
   min-height: 10vh;
@@ -74,8 +92,32 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.5em 0;
 }
 
-p, li {
+#page-body h1 {
+  font-size: 1.8em;
+}
+#page-body h2 {
+  font-size: 1.55em;
+}
+#page-body h3 {
+  font-size: 1.33em;
+}
+#page-body h4 {
+  font-size: 1.11em;
+}
+#page-body h5 {
+  font-size: 1.0em;
+}
+#page-body h6 {
+  font-size: 1.0em;
+  font-weight: inherit;
+}
+
+p, .post-list li {
   margin: 1em 0;
+}
+
+li {
+  margin: 0.5em 0;
 }
 
 p:first-of-type {
@@ -89,6 +131,57 @@ p:last-of-type {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+blockquote {
+  position: relative;
+  padding: 1.0em;
+  width: 90%;
+  margin: 2em auto;
+
+  border-left: 0.33em solid #A20021;
+  border-left: 0.33em solid #91171F;
+  border-radius: 0em 1em 1em 0em;
+  background:#ededed;
+
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.6;
+  color: #606060;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+table {
+  margin: 2em 0;
+  width: 100%;
+  border-collapse: collapse
+}
+
+th, td {
+  padding: 0.28em 0.55em;
+  border-bottom: 0.1em solid #aaaaaa;
+  text-align: left;
+}
+
+dt {
+  font-weight: 700
+}
+
+dd {
+  margin-left: 2em;
+}
+
+#page-body a {
+  padding-bottom: 0.15em;
+  border-bottom: 0.1em solid #91171F;
+}
+
+#page-body a:hover {
+  color: #91171F;
 }
 
 .post-date {
@@ -111,6 +204,11 @@ a {
 
   #page-footer  {
     font-size: 1.6rem;
+  }
+
+  th, td {
+    padding: 0.55em 1.0em;
+    border-bottom: 0.05em solid #aaaaaa;
   }
 }
 

@@ -6,11 +6,11 @@
   margin: 1em 0;
 }
 
-h1.post-title {
+.post-title {
   margin: 0;
   font-size: 1.8em;
 }
-h2.post-date {
+.post-date {
   margin: 0 0 1em;
   font-size: 1.2em;
   font-weight: 400;
