@@ -1,0 +1,23 @@
+url: "/"
+name: Blog Title
+author: Author
+about: |
+  This is the template for my blog. Right now, you are reading the about section of it.
+
+  Welcome and please enjoy my super nice blog. I will now include some nonsense ipsum to fill space.
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante metus dictum at tempor commodo ullamcorper. In cursus turpis massa tincidunt. Blandit cursus risus at ultrices mi tempus imperdiet. Cursus in hac habitasse platea.
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /:year/:month/:day/:title
+
+show_drafts: false
+future: false
+markdown: kramdown
+highlighter: rouge
