@@ -9,7 +9,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page]({{ site.url }}). And some text next to it.
+[Link to another page]({{ site.url | append: site.baseurl }}). And some text next to it.
 
 There should be whitespace between paragraphs.
 

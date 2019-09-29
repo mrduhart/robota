@@ -15,7 +15,7 @@ layout: default
             <time class="post-date" datetime="{{ post.date }}">
               {{ post.date | date: '%d-%m-%Y'}}
             </time>
-            <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+            <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </li>
         {% endfor %}
       </ul>

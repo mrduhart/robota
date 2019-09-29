@@ -9,7 +9,7 @@
   {% endif %}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}" />
   {% if layout.style %}
     {% include {{ layout.style }} %}
   {% endif %}
