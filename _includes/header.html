@@ -1,6 +1,12 @@
 <header id="page-header" class="dark">
   <div class="wrapper">
-    <h1><a href="{{ site.url | append: site.baseurl }}">{{ site.name }}</a></h1>
+    <h1 class="page-title"><a href="{{ / | append: site.baseurl }}">{{ site.name }}</a></h1>
+
+    <div id="nav-control" class="panel-control closed">
+      <span id="nav-icon" class="icon fa">O</span>
+    </div>
+
+    {% include pagenav.html %}
 
     {% if layout.header %}
       {% include {{ layout.header }} %}

@@ -1,0 +1,30 @@
+---
+layout: default
+style: posts/style.html
+---
+
+<main id="page-body" class="light">
+  <div class="wrapper">
+    <section class="posts-list">
+      <h2>Recent Posts</h2>
+
+      <div id="posts-grid" class="grid">
+        {% for post in site.posts %}
+          <article class="post-entry">
+              <a href="{{ post.url | prepend: site.baseurl }}"><span class="post-link" ></span></a>
+
+              <img class="post-img" src="{{ '/assets/imgs/' | prepend: site.baseurl | append: post.image }}" ></img>
+
+              <h1 class="post-title">{{ post.title }}</h1>
+
+              <p class="post-date">
+                <time datetime="{{ post.date }}">{{ post.date | date: '%d-%m-%Y'}}</time>
+              </p>
+
+              <p class="post-intro">{{ post.excerpt }}</p>
+            </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</main>

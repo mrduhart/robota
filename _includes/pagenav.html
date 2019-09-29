@@ -1,0 +1,7 @@
+<nav id="page-nav" class="panel closed light">
+  <div class="wrapper">
+    {% for nav in site.data.pagenav %}
+      <a class="nav-item" href="{{ nav.url | prepend: site.baseurl }}">{{ nav.title }}</a>
+    {% endfor %}
+  </div>
+</nav>

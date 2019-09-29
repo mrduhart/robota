@@ -1,11 +1,13 @@
 ---
 layout: default
-style: post/style.html
+style: posts/style.html
 ---
 
 <main id="page-body" class="light">
   <div class="wrapper">
     <article class="post">
+      <img class="post-img" src="{{ '/assets/imgs/' | prepend: site.baseurl | append: page.image }}" ></img>
+
       <h1 class="post-title">{{ page.title }}</h1>
 
       <p class="post-date" >
@@ -15,6 +17,7 @@ style: post/style.html
       </p>
 
       {{ content }}
+
     </article>
   </div>
 </main>

@@ -1,15 +1,16 @@
 ---
 title: Markdown Sample Post
 date: 2019-09-28 21:00:00 -06:00
+image: post.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante metus dictum at tempor commodo ullamcorper. In cursus turpis massa tincidunt. Blandit cursus risus at ultrices mi tempus imperdiet.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante metus dictum at tempor commodo ullamcorper. <!--more--> In cursus turpis massa tincidunt. Blandit cursus risus at ultrices mi tempus imperdiet.
 
 > Quisque sagittis purus sit amet volutpat consequat mauris. Dignissim suspendisse in est ante in. Orci a scelerisque purus semper eget duis at. Ante in nibh mauris cursus mattis molestie a iaculis at.
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page]({{ site.url | append: site.baseurl }}). And some text next to it.
+[Link to another page]({{ site.url }}). And some text next to it.
 
 There should be whitespace between paragraphs.
 

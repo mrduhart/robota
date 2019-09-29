@@ -8,6 +8,7 @@ about: |
   Welcome and please enjoy my super nice blog. I will now include some nonsense ipsum to fill space.
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante metus dictum at tempor commodo ullamcorper. In cursus turpis massa tincidunt. Blandit cursus risus at ultrices mi tempus imperdiet. Cursus in hac habitasse platea.
+ga_id: UA-153237091-1
 
 defaults:
   -
@@ -17,6 +18,7 @@ defaults:
     values:
       layout: "post"
       permalink: /:year/:month/:day/:title
+      excerpt_separator: <!--more-->
 
 show_drafts: false
 future: false

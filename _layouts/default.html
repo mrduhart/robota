@@ -2,6 +2,18 @@
 <html lang="en-US">
 
 <head>
+  {% if site.ga_id %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.ga_id }}');
+  </script>
+  {% endif %}
+
   {% if page.title %}
   <title>{{ page.title }} | {{ site.name }}</title>
   {% else %}
@@ -13,6 +25,7 @@
   {% if layout.style %}
     {% include {{ layout.style }} %}
   {% endif %}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300italic,400italic,600italic,700italic,800italic,100,200,300,400,600,700,800" rel="stylesheet" />
 </head>
 
@@ -38,5 +51,52 @@
   {% if layout.script %}
     {% include {{ layout.script }} %}
   {% endif %}
+  <script>
+    // Returns the computed style of an element
+    function getStyle(elem) {
+        return elem.currentStyle || window.getComputedStyle(elem);
+    }
+
+    // Responsive menu
+    var body = document.body;
+    var navCtrl = document.getElementById("nav-control");
+    var pageNav = document.getElementById("page-nav");
+
+    navCtrl.onclick = function(){
+      if (pageNav.classList.contains("closed")) {
+        body.classList.toggle('noscroll', true);
+        pageNav.classList.remove("closed");
+        navCtrl.classList.remove("closed");
+      }
+      else {
+        body.classList.toggle('noscroll', false);
+        pageNav.classList.add("closed");
+        navCtrl.classList.add("closed");
+      }
+    };
+
+    // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar.
+    var pageHeader = document.getElementById("page-header");
+    var pageNav = document.getElementById("page-nav");
+    var pageBody = document.getElementById("page-body");
+
+    var hdrHght = getStyle(pageHeader).height;
+    var threshold = 2.0 * pageHeader.offsetHeight;
+    var prevScroll = window.pageYOffset;
+
+    pageHeader.classList.add("fixed");
+    pageBody.style.marginTop = hdrHght;
+    pageNav.style.top = hdrHght;
+
+    window.onscroll = function() {
+      var currentScroll = window.pageYOffset;
+      var closeHeader = (
+        currentScroll > threshold
+        && currentScroll > prevScroll
+      );
+      pageHeader.classList.toggle("closed", closeHeader);
+      prevScroll = currentScroll;
+    }
+  </script>
 </body>
 </html>
