@@ -1,0 +1,26 @@
+---
+layout: default
+style: projects/style.html
+---
+
+<main id="page-body" class="light">
+  <div class="wrapper">
+    <section class="projects-list">
+      <h2>Projects</h2>
+
+      <div id="projects-grid" class="grid">
+        {% for project in site.projects %}
+          <article class="project-entry">
+
+            <a href="{{ project.url | relative_url }}"><span class="project-link" >link</span></a>
+
+            <img class="project-img" src="{{ '/assets/imgs/projects/' | append: project.image | relative_url}}" ></img>
+
+            <h1 class="project-title">{{ project.title }}</h1>
+
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</main>
