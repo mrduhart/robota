@@ -1,10 +1,10 @@
 ---
-title: First project
-date: 2019-09-28 21:00:00 -06:00
+title: Second project
+date: 2019-10-28 21:00:00 -06:00
 image: post.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante metus dictum at tempor commodo ullamcorper. In cursus turpis massa tincidunt. Blandit cursus risus at ultrices mi tempus imperdiet. In cursus turpis massa tincidunt. Blandit cursus risus at ultrices mi tempus imperdiet. In cursus turpis massa tincidunt. Blandit cursus risus at ultrices mi tempus imperdiet.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante metus dictum at tempor commodo ullamcorper. In cursus turpis massa tincidunt. Blandit cursus risus at ultrices mi tempus imperdiet.
 
 <!--more-->
 

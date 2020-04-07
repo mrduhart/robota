@@ -12,11 +12,15 @@ style: projects/style.html
         {% for project in site.projects %}
           <article class="project-entry">
 
-            <a href="{{ project.url | relative_url }}"><span class="project-link" >link</span></a>
+            <a href="{{ project.url | relative_url }}" class="project-link"><span></span></a>
+
+            <!-- <div class="image-container"></div> -->
 
             <img class="project-img" src="{{ '/assets/imgs/projects/' | append: project.image | relative_url}}" ></img>
 
             <h1 class="project-title">{{ project.title }}</h1>
+
+            {{ project.excerpt }}
 
           </article>
         {% endfor %}
